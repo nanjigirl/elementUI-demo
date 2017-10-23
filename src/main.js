@@ -10,7 +10,7 @@ require('./assets/css/cssInit.css');
 import App from './App.vue'
 import routerConfig from './router.config.js'
 import axios from 'axios'
-import store from './store.js'
+import store from './store/'
 window.moment = require('moment');
 Vue.prototype.axios = axios;
 

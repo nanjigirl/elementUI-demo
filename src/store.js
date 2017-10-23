@@ -24,12 +24,28 @@ const actions = {
     },
     decrement:({commit})=>{
         commit('decrement');
+    },
+    clickOdd:({commit,state})=>{
+        if(state.count%2 == 0){
+            commit('increment');
+        }
+    },
+    clickAsync:({commit})=>{
+        new Promise((resolve)=>{
+           setTimeout(function(){
+               commit('increment');
+               resolve();
+           },1000);
+        });
     }
 };
 
 const getters = {
     count(state){
         return state.count;
+    },
+    getNum(state){
+        return state.count%2 == 0?'偶数':'奇数'
     }
 }
 
