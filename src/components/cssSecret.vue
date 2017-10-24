@@ -116,6 +116,34 @@
                 </div>
             </el-col>
         </div>
+        <div class="lc-panel clearfix">
+            <el-col :span="24">
+                <div class="box-title clearfix">
+                    <h3><i class="icon iconfont icon-biaoti"></i>形状</h3>
+                </div>
+                <hr>
+                <div class="box-content">
+                    <el-col :span="4">
+                        <p class="box-subTitle">椭圆</p>
+                        <div class="twBox xzBox_1"></div>
+                    </el-col>
+                    <el-col :span="4">
+                        <p class="box-subTitle">平行四边形</p>
+                        <div class="twBox xzBox_2">click me</div>
+                    </el-col>
+                    <el-col :span="4">
+                        <p class="box-subTitle">菱形图片</p>
+                        <div class="twBox xzBox_3">
+                            <img src="../assets/images/fruit-1.jpeg" alt="">
+                        </div>
+                    </el-col>
+                    <el-col :span="4">
+                        <p class="box-subTitle">脚注</p>
+                        <div class="twBox txbkBox_4">I have a good idea</div>
+                    </el-col>
+                </div>
+            </el-col>
+        </div>
     </div>
 </template>
 
@@ -350,5 +378,47 @@
         border-top:.2em solid transparent;
         border-image:100% 0 0 linear-gradient(90deg,currentColor 4em,transparent 0);
         padding-top:1em;
+    }
+    .xzBox_1{
+        background:#fb3;
+        /*椭圆*/
+        /*border-radius:50%;*/
+        /*上半椭圆*/
+        /*border-radius:50%/100% 100% 0 0;*/
+        /*左半椭圆*/
+        border-radius:100% 0 0 100%/50%;
+    }
+    .xzBox_2{
+        position: relative;
+        color: #fff;
+        text-align: center;
+        line-height:10em;
+    }
+    .xzBox_2:before{
+        content: '';
+        position: absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background: #58a;
+        transform:skew(30deg);
+        z-index: -1;
+    }
+    .xzBox_3{
+        transform:rotate(45deg);
+        overflow: hidden;
+        width: 8em;
+        height:8em;
+        margin-top:2em;
+    }
+    .xzBox_3>img{
+        /*max-width:100%;*/
+        /*transform:rotate(-45deg) scale(2.5);*/
+        clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+        transition:1s clip-path;
+    }
+    .xzBox_3>img:hover{
+        clip-path:polygon(0 0,100% 0,100% 100%,0 100%);
     }
 </style>
