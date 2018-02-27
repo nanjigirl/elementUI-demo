@@ -413,12 +413,12 @@
         margin-top:2em;
     }
     .xzBox_3>img{
-        /*max-width:100%;*/
-        /*transform:rotate(-45deg) scale(2.5);*/
-        clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
-        transition:1s clip-path;
+        max-width:100%;
+        transform:rotate(-45deg) scale(2.5);
+        /*clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);*/
+        /*transition:1s clip-path;*/
     }
-    .xzBox_3>img:hover{
-        clip-path:polygon(0 0,100% 0,100% 100%,0 100%);
-    }
+    /*.xzBox_3>img:hover{*/
+        /*clip-path:polygon(0 0,100% 0,100% 100%,0 100%);*/
+    /*}*/
 </style>
